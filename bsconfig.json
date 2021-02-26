@@ -12,6 +12,9 @@
       "module": "commonjs"
     }
   ],
+  "js-post-build": {
+    "cmd": "/usr/bin/sed -i '1 i\\#!/usr/bin/env node'"
+  },
   "suffix": ".bs.js",
   "namespace": true,
   "bs-dependencies": [],

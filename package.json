@@ -25,5 +25,8 @@
   "homepage": "https://github.com/dlukanin/version-documenter#readme",
   "devDependencies": {
     "bs-platform": "^9.0.1"
+  },
+  "bin": {
+    "version-documenter": "./lib/js/src/Main.bs.js"
   }
 }
