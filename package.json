@@ -1,0 +1,29 @@
+{
+  "name": "version-documenter",
+  "version": "1.0.0",
+  "description": "Generate md or html file with lib versions from package.json",
+  "main": "lib/js/Main.bs.js",
+  "scripts": {
+    "test": "echo 1",
+    "re:build": "bsb -make-world -clean-world",
+    "re:watch": "bsb -make-world -clean-world -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlukanin/version-documenter.git"
+  },
+  "keywords": [
+    "documentation",
+    "package",
+    "versions"
+  ],
+  "author": "Lukanin Dmitry (dylukanin@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dlukanin/version-documenter/issues"
+  },
+  "homepage": "https://github.com/dlukanin/version-documenter#readme",
+  "devDependencies": {
+    "bs-platform": "^9.0.1"
+  }
+}
