@@ -2,12 +2,12 @@ open Js;
 
 type library = {
     currentVersion: string,
-    latestVersion: string | null
+    latestVersion: option<string>
 };
 
 type packageJson = {
-    dependencies: array<Dict.t>,
-    devDependencies: array<Dict.t>,
+    dependencies: array<Dict.t<string>>,
+    devDependencies: array<Dict.t<string>>,
     keywords: array<string>
 };
 
