@@ -1,6 +1,7 @@
 type library = {
+    name: string,
     currentVersion: string,
-    latestVersion: option<string>
+    latestVersion: string
 };
 
 let getLibraries: () => array<library>;
