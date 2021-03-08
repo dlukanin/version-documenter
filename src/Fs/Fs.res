@@ -1,5 +1,5 @@
 type fsType = {
-    writeFileSync: (string, string) => unit
+    writeFileSync: (. string, string) => unit
 }
 
 @bs.val external require: (string) => fsType = "require";
@@ -7,6 +7,7 @@ type fsType = {
 let fs = require("fs");
 
 let writeSync = (path, content) => {
-    fs.writeFileSync(path, content);
+    Js.log("Writing " ++ path ++ " with content " ++ content);
+    fs.writeFileSync(. path, content);
     ();
 }

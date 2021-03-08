@@ -1,3 +1,7 @@
 let (packageName, deps) = PackageJsonReader.getPackageInfo();
 
-Js.log(DocGenerator.generateDoc(packageName, deps));
+let doc = DocGenerator.generateDoc(packageName, deps);
+
+Fs.writeSync("generated.md", doc);
+
+Js.log("generated.md created");
