@@ -4,4 +4,4 @@ type library = {
     latestVersion: string
 };
 
-let getLibraries: () => array<library>;
+let getPackageInfo: () => (string, array<library>);

@@ -7,6 +7,7 @@ type library = {
 };
 
 type packageJson = {
+    name: string,
     dependencies: Dict.t<string>,
     devDependencies: Dict.t<string>,
     keywords: array<string>
@@ -21,6 +22,7 @@ let getPackageJson = () => {
         | Js.Exn.Error(obj) => {
             Js.log("No package.json found");
             {
+                name: "",
                 dependencies: Js.Dict.empty(),
                 devDependencies: Js.Dict.empty(),
                 keywords: []
@@ -40,7 +42,7 @@ let getVersionsFromDeps = (data) => Array2.map(Dict.entries(data), (entry) => {
     }
 })
 
-let getLibraries = () => {
+let getPackageInfo = () => {
     let packageJson = getPackageJson();
-    getVersionsFromDeps(packageJson.devDependencies);
+    (packageJson.name, getVersionsFromDeps(packageJson.devDependencies));
 };

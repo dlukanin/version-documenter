@@ -1,0 +1,1 @@
+let writeSync: (string, string) => unit;
